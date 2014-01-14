@@ -13,9 +13,8 @@ mkdir minecraftserver
 cd minecraftserver
 mkdir backup
 echo "Baixando Aquivos do Repositorio..."
-wget https://s3.amazonaws.com/Minecraft.Download/versions/1.7.4/minecraft_server.1.7.4.jar
+wget http://173.199.119.117/minecraft_server.jar
 wget https://raw.github.com/laizen/EasyMinecraft/master/minecraft
-mv minecraft_server.1.7.4.jar minecraft_server.jar
 echo "Registrando Serviço"
 cp minecraft /etc/init.d/
 chmod a+x /etc/init.d/minecraft
