@@ -39,12 +39,10 @@ fi
 procuraedestroifull(){
 
 #apagando arquivos mais antigos (a mais de 20 dias que existe)
-find $DSTDIR -name "f*" -ctime $TIME_BKCP -exec rm -f {} ";"
+find ./var/www/bck/ -name "m*" -cmin +240 -exec rm -f {} ";"
    if [ $? -eq 0 ] ; then
       echo "Arquivo de backup mais antigo eliminado com sucesso!"
    else
-      echo "Erro durante a busca e destruiÃ§Ã£o do backup antigo!"
-   fi
       echo "Erro durante a busca e destruiÃ§Ã£o do backup antigo!"
    fi
 }
